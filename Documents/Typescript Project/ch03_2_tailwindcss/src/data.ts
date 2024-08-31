@@ -72,6 +72,10 @@ export const posts: Post[] = [
   // 추가 게시물 정보...
 ]
 
+export function makeArray(size: number): number[] {
+  return Array.from({length: size}, (_, i) => i + 1)
+}
+
 export function randomParagraphs(num: number): string {
   const paragraph = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -80,4 +84,24 @@ export function randomParagraphs(num: number): string {
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
 
   return Array(num).fill(paragraph).join('\n\n')
+}
+
+export function randomSentence(): string {
+  return 'Sample sentence for demonstration.'
+}
+
+export function randomTitleText(): string {
+  return 'Sample Title'
+}
+
+export function randomName(): string {
+  return 'Sample Name'
+}
+
+export function randomDayMonthYear(): string {
+  return '01 January 2024'
+}
+
+export function randomRelativeDate(): string {
+  return '1 day ago'
 }
